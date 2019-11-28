@@ -4,6 +4,7 @@ import './demo/Drawer_Demo.dart';
 import './demo/ListView_Demo.dart';
 import './demo/Basic_Demo.dart';
 import './demo/Layout_Demo.dart';
+import './demo/View_Demo.dart';
 
 
 void main() => runApp(App());
@@ -35,7 +36,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3, // 设置标签的数量
+      length: 4, // 设置标签的数量
       child: Scaffold(
         backgroundColor: Colors.grey[100],
         appBar: AppBar(
@@ -61,7 +62,8 @@ class Home extends StatelessWidget {
             tabs: <Widget>[ // 设置一组标签
               Tab(icon: Icon(Icons.local_florist),),
               Tab(icon: Icon(Icons.change_history),),
-              Tab(icon: Icon(Icons.directions_bike),)
+              Tab(icon: Icon(Icons.directions_bike),),
+              Tab(icon: Icon(Icons.view_quilt),),
             ],
           ),
         ),
@@ -71,6 +73,7 @@ class Home extends StatelessWidget {
             ListViewDemo(),
             BasicDemo(),
             LayoutDemo(),
+            ViewDemo(),
             // Icon(Icons.change_history, size: 128.0, color: Colors.black12),
             // Icon(Icons.directions_bike, size: 128.0, color: Colors.black12),
           ],

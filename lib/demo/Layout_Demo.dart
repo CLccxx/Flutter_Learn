@@ -11,18 +11,18 @@ class LayoutDemo extends StatelessWidget {
         children: <Widget>[
           ConstrainedBox(
             constraints: BoxConstraints(
-              minHeight: 200,
+              minHeight: 300.0,
               maxWidth: 300.0
             ),
             child: Container(
-              color: Color.fromRGBO(2, 53, 215, 1.0),
+              color: Color.fromRGBO(2, 53, 25, 1.0),
             ),
           ),
 
           AspectRatio(
             aspectRatio: 16.0 / 9.0,
             child: Container(
-              color: Color.fromRGBO(3, 54, 255, 1.0),
+              color: Color.fromRGBO(3, 54, 14, 1.0),
             ),
           ),
         ],
