@@ -3,6 +3,7 @@ import './demo/Bottom_Navigation_Bar_Demo.dart';
 import './demo/Drawer_Demo.dart';
 import './demo/ListView_Demo.dart';
 import './demo/Basic_Demo.dart';
+import './demo/Layout_Demo.dart';
 
 
 void main() => runApp(App());
@@ -69,8 +70,9 @@ class Home extends StatelessWidget {
             // Icon(Icons.access_alarm, size: 128.0, color: Colors.black12),
             ListViewDemo(),
             BasicDemo(),
+            LayoutDemo(),
             // Icon(Icons.change_history, size: 128.0, color: Colors.black12),
-            Icon(Icons.directions_bike, size: 128.0, color: Colors.black12),
+            // Icon(Icons.directions_bike, size: 128.0, color: Colors.black12),
           ],
         ),
         drawer: DrawerDemo(),

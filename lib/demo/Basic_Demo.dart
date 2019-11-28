@@ -7,19 +7,21 @@ class BasicDemo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container( // 默认沾满整个屏幕
+    return Container(
+      // 默认沾满整个屏幕
       // color: Colors.grey[100],
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: NetworkImage('https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3276179142,1686381254&fm=26&gp=0.jpg'),
-          alignment: Alignment.topCenter,
-          // repeat: ImageRepeat.repeat,
-          fit: BoxFit.cover,
-          colorFilter: ColorFilter.mode(
-            Colors.indigoAccent[400].withOpacity(0.6), 
-            BlendMode.lighten,
-            )
-        ),
+            image: NetworkImage(
+                'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3276179142,1686381254&fm=26&gp=0.jpg'),
+            alignment: Alignment.topCenter,
+            // repeat: ImageRepeat.repeat,
+            fit: BoxFit.cover, // 填充方式
+            colorFilter: ColorFilter.mode(
+              // 滤镜
+              Colors.indigoAccent[400].withOpacity(0.6),
+              BlendMode.lighten,
+            )),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -31,7 +33,7 @@ class BasicDemo extends StatelessWidget {
             margin: EdgeInsets.all(8.0), // 外边距
             width: 90.0,
             height: 90.0,
-            decoration: BoxDecoration( 
+            decoration: BoxDecoration(
               color: Color.fromRGBO(3, 54, 255, 1.0),
               border: Border.all(
                 color: Colors.black,
@@ -41,11 +43,11 @@ class BasicDemo extends StatelessWidget {
               // borderRadius: BorderRadius.circular(9.0),
               boxShadow: [
                 BoxShadow(
-                  offset: Offset(0.0, 16.0),
-                  color: Color.fromRGBO(16, 20, 188, 1.0),
-                  blurRadius: 25.0, // 模糊程度
-                  spreadRadius: -9.0 // 正数扩大阴影效果，负数减小阴影效果
-                )
+                    offset: Offset(0.0, 16.0),
+                    color: Color.fromRGBO(16, 20, 188, 1.0),
+                    blurRadius: 25.0, // 模糊程度
+                    spreadRadius: -9.0 // 正数扩大阴影效果，负数减小阴影效果
+                    )
               ],
               shape: BoxShape.circle, // 圆角效果中不能使用 border圆角
               // gradient: RadialGradient( // 镜像渐变
@@ -55,14 +57,15 @@ class BasicDemo extends StatelessWidget {
               //   ],
               //   ),
 
-              gradient: LinearGradient( // 线性渐变
+              gradient: LinearGradient(
+                // 线性渐变
                 colors: [
                   Color.fromRGBO(7, 102, 255, 1.0),
                   Color.fromRGBO(3, 28, 128, 1.0),
                 ],
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-                ),
+              ),
             ),
           )
         ],
@@ -80,25 +83,23 @@ class RichTextDemo extends StatelessWidget {
       text: TextSpan(
         text: 'chenglong',
         style: TextStyle(
-          color: Colors.deepOrangeAccent,
-          fontSize: 34.0,
-          fontStyle: FontStyle.italic,
-          fontWeight: FontWeight.w100
-          ),
-          children: [
-            TextSpan(
-              text: '.net',
-              style: TextStyle(
-                fontSize: 17.0,
-                fontWeight: FontWeight.w300,
-              ),
+            color: Colors.deepOrangeAccent,
+            fontSize: 34.0,
+            fontStyle: FontStyle.italic,
+            fontWeight: FontWeight.w100),
+        children: [
+          TextSpan(
+            text: '.net',
+            style: TextStyle(
+              fontSize: 17.0,
+              fontWeight: FontWeight.w300,
             ),
-          ],
           ),
-          );
+        ],
+      ),
+    );
   }
 }
-
 
 class TextDemo extends StatelessWidget {
   const TextDemo({Key key}) : super(key: key);
@@ -122,25 +123,22 @@ class TextDemo extends StatelessWidget {
   }
 }
 
-
-
 // 设置单独边框
 // border: Border( // 设置边框
-              //   top: BorderSide(
-              //     color: Colors.black,
-              //     width: 3.0,
-              //     style: BorderStyle.solid,
-              //   ),
-              //   bottom: BorderSide(
-              //     color: Colors.black,
-              //     width: 3.0,
-              //     style: BorderStyle.solid,
-              //   )
-              // )
-
+//   top: BorderSide(
+//     color: Colors.black,
+//     width: 3.0,
+//     style: BorderStyle.solid,
+//   ),
+//   bottom: BorderSide(
+//     color: Colors.black,
+//     width: 3.0,
+//     style: BorderStyle.solid,
+//   )
+// )
 
 // 单独设置圆角
-              // borderRadius: BorderRadius.only(
-              //   topLeft: Radius.circular(10.0),
-              //   topRight: Radius.circular(20.0),
-              // )
+// borderRadius: BorderRadius.only(
+//   topLeft: Radius.circular(10.0),
+//   topRight: Radius.circular(20.0),
+// )

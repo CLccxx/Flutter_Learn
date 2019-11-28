@@ -32,7 +32,7 @@ class DrawerDemo extends StatelessWidget {
           ),
           ListTile(
             title: Text('Message', textAlign: TextAlign.right),
-            trailing: Icon(Icons.message, color: Colors.black12, size: 22.0),
+            trailing: Icon(Icons.message, color: Colors.black12, size: 22.0), // 右边显示：左边显示 leading
             onTap: () => Navigator.pop(context),
           ),
           ListTile(
