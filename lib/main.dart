@@ -9,6 +9,7 @@ import './demo/View_Demo.dart';
 import './demo/Sliver_Demo.dart';
 import './demo/navigator_Demo.dart';
 import './demo/post_Show.dart';
+import './demo/form_Demo.dart';
 
 
 void main() => runApp(App());
@@ -25,11 +26,12 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       // home: NavigatorDemo(),//Home(),
-      initialRoute: '/', // 初始界面
+      initialRoute: '/form', // 初始界面
       routes: {
         '/' : (context) => Home(),//NavigatorDemo(),
         '/about' : (context) => Page(title: 'About'),
         '/postShow' : (context) => PostShow(post: posts[1]),
+        '/form' : (context) => FormDemo(),
       },
       theme: ThemeData(
         primarySwatch: Colors.yellow,
