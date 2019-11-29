@@ -10,6 +10,7 @@ import './demo/Sliver_Demo.dart';
 import './demo/navigator_Demo.dart';
 import './demo/post_Show.dart';
 import './demo/form_Demo.dart';
+import './demo/material_components.dart';
 
 
 void main() => runApp(App());
@@ -26,18 +27,20 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       // home: NavigatorDemo(),//Home(),
-      initialRoute: '/form', // 初始界面
+      initialRoute: '/mdc', // 初始界面
       routes: {
         '/' : (context) => Home(),//NavigatorDemo(),
         '/about' : (context) => Page(title: 'About'),
         '/postShow' : (context) => PostShow(post: posts[1]),
         '/form' : (context) => FormDemo(),
+        '/mdc':(context) => MaterialComponents(),
       },
       theme: ThemeData(
         primarySwatch: Colors.yellow,
         // 水波纹效果，定制MaterialApp样式 
         highlightColor: Color.fromRGBO(255,255,255,0.5), // 高亮颜色
-        splashColor: Colors.white70 // 水波纹颜色
+        splashColor: Colors.white70, // 水波纹颜色
+        accentColor: Color.fromRGBO(3, 54, 255, 1.0) // 
       ),
     );
   }

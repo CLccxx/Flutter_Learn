@@ -49,6 +49,7 @@ class _RegisterFormDemoState extends State<RegisterFormDemo> {
       debugPrint('password: $Password');
 
 
+      // 底部提示栏，Scaffold.of(context)获取最近的Scaffold
       Scaffold.of(context).showSnackBar(
         SnackBar(
           content: Text('Registering....'),
