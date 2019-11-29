@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/model/post.dart';
 import './demo/Bottom_Navigation_Bar_Demo.dart';
 import './demo/Drawer_Demo.dart';
 import './demo/ListView_Demo.dart';
@@ -6,6 +7,8 @@ import './demo/Basic_Demo.dart';
 import './demo/Layout_Demo.dart';
 import './demo/View_Demo.dart';
 import './demo/Sliver_Demo.dart';
+import './demo/navigator_Demo.dart';
+import './demo/post_Show.dart';
 
 
 void main() => runApp(App());
@@ -21,7 +24,13 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      // home: NavigatorDemo(),//Home(),
+      initialRoute: '/', // 初始界面
+      routes: {
+        '/' : (context) => Home(),//NavigatorDemo(),
+        '/about' : (context) => Page(title: 'About'),
+        '/postShow' : (context) => PostShow(post: posts[1]),
+      },
       theme: ThemeData(
         primarySwatch: Colors.yellow,
         // 水波纹效果，定制MaterialApp样式 
