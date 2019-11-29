@@ -5,6 +5,7 @@ import './demo/ListView_Demo.dart';
 import './demo/Basic_Demo.dart';
 import './demo/Layout_Demo.dart';
 import './demo/View_Demo.dart';
+import './demo/Sliver_Demo.dart';
 
 
 void main() => runApp(App());
@@ -73,7 +74,8 @@ class Home extends StatelessWidget {
             ListViewDemo(),
             BasicDemo(),
             LayoutDemo(),
-            ViewDemo(),
+            SliverDemo(),
+            // ViewDemo(),
             // Icon(Icons.change_history, size: 128.0, color: Colors.black12),
             // Icon(Icons.directions_bike, size: 128.0, color: Colors.black12),
           ],
