@@ -1,4 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/demo/Slider_Demo.dart';
+import 'package:flutter_learn/demo/bottom_sheet_demo.dart';
+import 'package:flutter_learn/demo/datetime_Demo.dart';
+import 'package:flutter_learn/demo/simple_dialog_Demo.dart';
+import './button_Demo.dart';
+import './floating_action_button_Demo.dart';
+import './popup_menu_button_Demo.dart';
+import './form_Demo.dart';
+import './CheckBoxDemo.dart';
+import './radio_demo.dart';
+import './Switch_Demo.dart';
+import './alert_dialog_Demo.dart';
+import './snack_bar_Demo.dart';
+import './expansionPane_Demo.dart';
+import './ChipDemo.dart';
+import './DataTable_Demo.dart';
+import './paginated_Data_Table_Demo.dart';
+import './CardDemo.dart';
+import './Stepper_demo.dart';
 
 class MaterialComponents extends StatelessWidget {
   @override
@@ -13,89 +32,27 @@ class MaterialComponents extends StatelessWidget {
           ListItem(title: 'ButtonDemo', page: ButtonDemo()),
           ListItem(
               title: 'FloatingActionButtonDemo',
-              page: FloatingActionButtonDemo())
+              page: FloatingActionButtonDemo()),
+          ListItem(title: 'PopUpMenuButtonDemo', page: PopupMenuButtonDemo()),
+          ListItem(title: 'FormDemo', page: FormDemo()),
+          ListItem(title: 'CheckBoxDemo', page: CheckBoxDemo()),
+          ListItem(title: 'RadioDemo', page: RadioDemo()),
+          ListItem(title: 'SwitchDemo', page: SwitchDemo()),
+          ListItem(title: 'SliderDemo', page: SliderDemo()),
+          ListItem(title: 'DateTimeDemo', page: DateTimeDemo()),
+          ListItem(title: 'SimpleDialogDemo', page: SimpleDialogDemo()),
+          ListItem(title: 'AlertDialogDemo', page: AlertDialogDemo()),
+          ListItem(title: 'BottomSheetDemo', page: BottomSheetDemo()),
+          ListItem(title: 'SnackBarDemo', page: SnackBarDemo()),
+          ListItem(title: 'ExpansionPanelDemo', page: ExpansionPaneDemo()),
+          ListItem(title: 'ChipDemo', page: ChipDemo()),
+          ListItem(title: 'DataTableDemo', page: DataTableDemo()),
+          ListItem(title: 'PaginatedDataTableDemo', page: PaginatedDataTableDemo()),
+          ListItem(title: 'CardDemo', page: CardDemo()),
+          ListItem(title: 'SteepDemo', page: StepperDemo()),
+          
+
         ],
-      ),
-    );
-  }
-}
-
-class FloatingActionButtonDemo extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    final Widget _floatingActionButton = FloatingActionButton(
-      onPressed: () {
-        Navigator.pop(context);
-      },
-      child: Icon(Icons.adb),
-      elevation: 10.0, // 与下层部件的高度，用来控制阴影
-      backgroundColor: Colors.black38,
-      // shape: BeveledRectangleBorder( // 方形
-      //   borderRadius: BorderRadius.circular(20.0),
-      // ),
-    );
-
-    final Widget _floatingActionButtonExtended = FloatingActionButton.extended(
-      // 没有child：可以直接设置icon
-      onPressed: () {},
-      icon: Icon(Icons.add),
-      label: Text('Add'),
-      backgroundColor: Colors.pinkAccent,
-    );
-
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('FloatingActionButtonDemo'),
-        elevation: 0.0,
-      ),
-      floatingActionButton: _floatingActionButton,
-      floatingActionButtonLocation:
-          FloatingActionButtonLocation.endDocked, // 设置漂浮按钮的位置
-      bottomNavigationBar: BottomAppBar(
-        child: Container(
-          height: 70.0,
-        ),
-        shape: CircularNotchedRectangle(), // bottomAppBar为漂浮按钮流出一个缺口，
-      ),
-    );
-  }
-}
-
-class ButtonDemo extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    final Widget FlatButtonDemo = Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        FlatButton(
-          // 文字按钮
-          child: Text('button'),
-          onPressed: () {},
-          splashColor: Colors.blueAccent, // 溅墨效果的颜色
-          textColor: Theme.of(context).accentColor, // 字体颜色
-        ),
-        FlatButton.icon(
-          icon: Icon(Icons.add),
-          label: Text('add'),
-          onPressed: () {},
-          splashColor: Colors.pinkAccent,
-        ),
-      ],
-    );
-
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('ButtonDemo'),
-        elevation: 0.0,
-      ),
-      body: Container(
-        padding: EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            FlatButtonDemo,
-          ],
-        ),
       ),
     );
   }
@@ -112,10 +69,10 @@ class _WidgetDemo extends StatelessWidget {
       body: Container(
         padding: EdgeInsets.all(16.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[],
             ),
           ],
