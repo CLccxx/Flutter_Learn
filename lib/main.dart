@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/demo/state/state.managment_Demo.dart';
 import 'package:flutter_learn/model/post.dart';
 import './demo/Bottom_Navigation_Bar_Demo.dart';
 import './demo/Drawer_Demo.dart';
@@ -27,13 +28,14 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       // home: NavigatorDemo(),//Home(),
-      initialRoute: '/mdc', // 初始界面
+      initialRoute: '/state-management', // 初始界面
       routes: {
         '/' : (context) => Home(),//NavigatorDemo(),
         '/about' : (context) => Page(title: 'About'),
         '/postShow' : (context) => PostShow(post: posts[1]),
         '/form' : (context) => FormDemo(),
         '/mdc':(context) => MaterialComponents(),
+        '/state-management':(context) => StateManagementDemo(),
       },
       theme: ThemeData(
         primarySwatch: Colors.yellow,

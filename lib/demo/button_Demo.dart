@@ -130,7 +130,7 @@ class ButtonDemo extends StatelessWidget {
                 ),
               ),
               child: ButtonBar(
-                buttonPadding: EdgeInsets.symmetric(horizontal: 10.0),
+                // buttonPadding: EdgeInsets.symmetric(horizontal: 10.0),
                 children: <Widget>[
                   Container(
                     width: 100,
